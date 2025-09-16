@@ -58,7 +58,6 @@
   </script>
   <style>
     html { scroll-behavior: smooth; }
-    /* Hero organic blob with red tones */
     .blob {
       filter: blur(40px);
       background:
@@ -75,51 +74,20 @@
     }
     .orb:hover { transform: translateY(-8px) rotate(2deg); box-shadow: 0 18px 40px rgba(225,29,72,.25); }
     .focusable:focus-visible { outline: 3px solid rgba(244,63,94,.5); outline-offset: 3px; border-radius: 12px; }
-
-    /* Command palette & sheet: theme-safe tokens driven by body classes */
     .surface { background-color: rgba(255,255,255,0.96); color: #0A0A0A; border: 1px solid rgba(10,10,10,0.12); }
     .backdrop { background: rgba(0,0,0,0.4); }
-    body.theme-dark .surface { background-color: rgba(17,17,17,0.98); color: #FFFFFF; border-color: rgba(255,255,255,0.14); }
-    body.theme-dark .backdrop { background: rgba(0,0,0,0.6); }
-    body.theme-dark .surface input::placeholder { color: rgba(255,255,255,0.55); }
-
-    /* Storyline timeline bead */
-    .bead {
-      position: relative;
-      padding-left: 2.25rem;
-    }
+    .bead { position: relative; padding-left: 2.25rem; }
     .bead::before {
-      content: '';
-      position: absolute;
-      left: 0.25rem;
-      top: 0.35rem;
-      width: 10px;
-      height: 10px;
-      border-radius: 9999px;
-      background: #E11D48;
-      box-shadow: 0 0 0 6px rgba(225,29,72,0.12);
+      content: ''; position: absolute; left: 0.25rem; top: 0.35rem; width: 10px; height: 10px; border-radius: 9999px; background: #E11D48; box-shadow: 0 0 0 6px rgba(225,29,72,0.12);
     }
     .bead::after {
-      content: '';
-      position: absolute;
-      left: 0.5rem;
-      top: 1.2rem;
-      bottom: -1.2rem;
-      width: 2px;
-      background: linear-gradient(to bottom, rgba(225,29,72,0.25), transparent);
+      content: ''; position: absolute; left: 0.5rem; top: 1.2rem; bottom: -1.2rem; width: 2px; background: linear-gradient(to bottom, rgba(225,29,72,0.25), transparent);
     }
-
-    /* Call Cards stacking vibe */
-    .card-tilt {
-      transition: transform .3s ease, box-shadow .3s ease, background-color .3s ease;
-      background: linear-gradient(180deg, #FFFFFF 0%, #F9F9F9 100%);
-    }
+    .card-tilt { transition: transform .3s ease, box-shadow .3s ease, background-color .3s ease; background: linear-gradient(180deg, #FFFFFF 0%, #F9F9F9 100%); }
     .card-tilt:hover { transform: translateY(-6px) rotate(-0.5deg); box-shadow: 0 18px 40px rgba(0,0,0,0.12); }
-    body.theme-dark .card-tilt { background: linear-gradient(180deg, #151515 0%, #0F0F0F 100%); }
   </style>
 </head>
 <body class="bg-snow text-ink font-body antialiased">
-  <!-- Floating Glass Navbar -->
   <header class="fixed top-4 left-0 right-0 z-50">
     <nav class="mx-auto max-w-6xl px-4">
       <div class="backdrop-blur-xl bg-snow/70 border border-red-100/80 rounded-2xl shadow-soft px-4 py-3 flex items-center justify-between">
@@ -134,13 +102,11 @@
         </div>
         <div class="flex items-center gap-2">
           <button id="sparkleBtn" class="px-3 py-2 rounded-xl bg-red-600 text-snow hover:bg-red-700 transition focusable">Sparkle</button>
-          <button id="modeBtn" class="px-3 py-2 rounded-xl border border-ink/15 text-ink hover:bg-fog transition focusable">Theme</button>
         </div>
       </div>
     </nav>
   </header>
 
-  <!-- Hero -->
   <section id="top" class="relative overflow-hidden">
     <div class="absolute inset-0 -z-10">
       <div class="blob absolute -top-32 md:-top-24 left-1/2 -translate-x-1/2 w-[1200px] h-[1200px] opacity-50 animate-drift"></div>
@@ -155,7 +121,7 @@
             <span class="text-ink/80 text-sm">Designer-leaning Frontend Engineer</span>
           </div>
           <h1 class="mt-5 font-display text-4xl md:text-6xl leading-tight">
-            Crisp, quiet interfaces with a bold red heartbeat.
+            Aspire.
           </h1>
           <p class="mt-4 text-ink/80 md:text-lg">
             Purposeful web experiences—lightweight, accessible, and elegantly animated. White, red, and black done right.
@@ -206,7 +172,6 @@
         </div>
       </div>
 
-      <!-- Floating badges for uniqueness -->
       <div class="mt-10 flex gap-3">
         <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-ink/10 text-ink/80 bg-snow animate-pingy">⬤ Micro-interactions</span>
         <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-ink/10 text-ink/80 bg-snow animate-pingy" style="animation-delay:.5s">⬤ A11y-first</span>
@@ -215,7 +180,6 @@
     </div>
   </section>
 
-  <!-- About: Storyline Timeline -->
   <section id="about" class="py-16 md:py-24">
     <div class="mx-auto max-w-6xl px-6">
       <div class="reveal">
@@ -264,7 +228,6 @@
     </div>
   </section>
 
-  <!-- Work: Orb Grid -->
   <section id="work" class="py-16 md:py-24 bg-fog/70">
     <div class="mx-auto max-w-6xl px-6">
       <div class="reveal flex items-end justify-between gap-4">
@@ -317,7 +280,6 @@
     </div>
   </section>
 
-  <!-- Contact: Call Cards Board -->
   <section id="contact" class="py-16 md:py-24 relative">
     <div class="absolute inset-0 -z-10 pointer-events-none">
       <div class="blob absolute -bottom-40 left-1/2 -translate-x-1/2 w-[900px] h-[900px] opacity-30 animate-drift"></div>
@@ -325,7 +287,7 @@
     <div class="mx-auto max-w-6xl px-6">
       <div class="reveal flex items-center gap-3">
         <div class="w-8 h-8 rounded-lg border border-ink/15 grid place-items-center text-ink font-semibold">K</div>
-        <h2 class="font-display text-3xl md:text-4xl">Call Cards</h2>
+        <h2 class="font-display text-3xl md;text-4xl">Call Cards</h2>
       </div>
       <p class="mt-2 text-ink/80 reveal">Pick your channel. Each card holds a micro-intro.</p>
 
@@ -364,7 +326,6 @@
     </div>
   </section>
 
-  <!-- Detail Sheet (Modal) -->
   <div id="sheet" class="fixed inset-0 z-50 hidden">
     <div class="absolute inset-0 backdrop"></div>
     <div class="absolute bottom-0 left-0 right-0">
@@ -382,7 +343,6 @@
     </div>
   </div>
 
-  <!-- Command Palette -->
   <div id="palette" class="fixed inset-0 z-50 hidden">
     <div class="absolute inset-0 backdrop"></div>
     <div class="absolute top-24 left-0 right-0">
@@ -410,7 +370,6 @@
   </footer>
 
   <script>
-    // Reveal on scroll
     const io = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
@@ -421,28 +380,8 @@
     }, { threshold: 0.12 });
     document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // THEME: robust class toggling ensures palette/sheet stay styled
-    const modeBtn = document.getElementById('modeBtn');
-    function setTheme(isDark) {
-      document.body.classList.toggle('theme-dark', isDark);
-      document.body.classList.toggle('bg-snow', !isDark);
-      document.body.classList.toggle('bg-ink', isDark);
-      document.body.classList.toggle('text-snow', isDark);
-      // Navbar glass tone
-      const navWrap = document.querySelector('header .backdrop-blur-xl');
-      if (navWrap) {
-        navWrap.classList.toggle('bg-snow/70', !isDark);
-        navWrap.classList.toggle('bg-ink/50', isDark);
-        navWrap.style.borderColor = isDark ? 'rgba(255,255,255,0.14)' : 'rgba(244,63,94,0.3)';
-      }
-    }
-    let dark = false;
-    modeBtn.addEventListener('click', () => { dark = !dark; setTheme(dark); });
-
-    // Hero stat card pulse
     const pulseBtn = document.getElementById('pulseBtn');
     const calmBtn  = document.getElementById('calmBtn');
     const introStatus = document.getElementById('introStatus');
@@ -473,7 +412,6 @@
     calmBtn.addEventListener('click', stopPulse);
     stopPulse();
 
-    // Sparkles
     const sparkleBtn = document.getElementById('sparkleBtn');
     const hero = document.getElementById('top');
     const sparkCount = document.getElementById('sparkCount');
@@ -515,7 +453,6 @@
       if (e.key === 'Escape') { closePalette(); closeSheet(); }
     });
 
-    // Orb grid: toggle layout
     const layoutBtn = document.getElementById('layoutBtn');
     const orbGrid = document.getElementById('orbGrid');
     let alt = false;
@@ -528,7 +465,6 @@
       });
     }
 
-    // Sheet for project details
     const sheet = document.getElementById('sheet');
     const sheetClose = document.getElementById('sheetClose');
     const sheetTitle = document.getElementById('sheetTitle');
@@ -553,7 +489,6 @@
       });
     });
 
-    // Command palette
     const palette = document.getElementById('palette');
     const paletteInput = document.getElementById('paletteInput');
     const paletteClose = document.getElementById('paletteClose');
@@ -572,7 +507,6 @@
     paletteClose.addEventListener('click', closePalette);
     palette.addEventListener('click', (e) => { if (e.target === palette) closePalette(); });
 
-    // Palette quick actions
     palette.querySelectorAll('[data-goto]').forEach(btn => {
       btn.addEventListener('click', () => {
         const to = btn.getAttribute('data-goto');
@@ -590,5 +524,5 @@
       }
     });
   </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97fe3292b541fee9',t:'MTc1ODAwMjk5My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97fe59e9f35e066e',t:'MTc1ODAwNDYwNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
